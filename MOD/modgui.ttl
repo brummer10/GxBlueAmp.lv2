@@ -1,0 +1,28 @@
+@prefix modgui: <http://moddevices.com/ns/modgui#> .
+@prefix lv2:    <http://lv2plug.in/ns/lv2core#> .
+
+<http://guitarix.sourceforge.net/plugins/gx_blueamp_#_blueamp_>
+    modgui:gui [
+        modgui:resourcesDirectory <modgui> ;
+        modgui:iconTemplate <modgui/icon-gxblueamp.html> ;
+        modgui:stylesheet <modgui/stylesheet-gxblueamp.css> ;
+        modgui:screenshot <modgui/screenshot-gxblueamp.png> ;
+        modgui:thumbnail <modgui/thumbnail-gxblueamp.png> ;
+        modgui:brand " Guitarix " ;
+        modgui:label "GxBlueAmp" ;
+        modgui:model "mod-panel" ;
+        modgui:panel "0720" ;
+        modgui:port [
+            lv2:index 0 ;
+            lv2:symbol "VOLUME" ;
+            lv2:name "VOLUME" ;
+        ] , [
+            lv2:index 1 ;
+            lv2:symbol "TONE" ;
+            lv2:name "TONE" ;
+        ] , [
+            lv2:index 2 ;
+            lv2:symbol "MASTER" ;
+            lv2:name "MASTER" ;
+        ] ;
+    ] .
