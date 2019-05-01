@@ -1,4 +1,4 @@
-// generated from file '../dkbuild/blueamp//blueamp.dsp' by dsp2cc:
+// generated from file './/sarrisbluesamp.dsp' by dsp2cc:
 // Code generated with Faust 2.15.11 (https://faust.grame.fr)
 
 #include "sarrisbluesamp_table.h"
@@ -150,8 +150,8 @@ public:
 Dsp::Dsp()
 	: PluginLV2() {
 	version = PLUGINLV2_VERSION;
-	id = "blueamp";
-	name = N_("BlueAmp");
+	id = "sarrisbluesamp";
+	name = N_("sarrisbluesamp");
 	mono_audio = compute_static;
 	stereo_audio = 0;
 	set_samplerate = init_static;
@@ -316,7 +316,7 @@ void always_inline Dsp::compute(int count, FAUSTFLOAT *input0, FAUSTFLOAT *outpu
 		fRec6[0] = (fSlow2 + (0.99299999999999999 * fRec6[1]));
 		double fTemp0 = ((fConst0 * (fConst50 + ((fRec6[0] * (fConst51 + (fConst0 * ((fConst52 * fRec6[0]) + (fConst53 * fRec4[0]))))) + (fRec4[0] * (fConst54 + (fConst55 * fRec4[0])))))) + 1.1175417102513499e-11);
 		fRec5[0] = (double(input0[i]) - (((((fRec5[1] * ((fConst0 * (fConst18 + ((fRec6[0] * (fConst20 + (fConst11 * ((fConst22 * fRec6[0]) + (fConst24 * fRec4[0]))))) + (fRec4[0] * (fConst25 + (fConst26 * fRec4[0])))))) + 4.4701668410053997e-11)) + (fRec5[2] * ((fConst11 * (((fRec6[0] * (fConst28 + ((fConst30 * fRec6[0]) + (fConst31 * fRec4[0])))) + (fRec4[0] * (fConst32 + (fConst33 * fRec4[0])))) + -2.2383835290769698e-14)) + 6.7052502615080906e-11))) + (fRec5[3] * ((fConst0 * (fConst34 + ((fRec6[0] * (fConst35 + (fConst11 * ((fConst36 * fRec6[0]) + (fConst37 * fRec4[0]))))) + (fRec4[0] * (fConst38 + (fConst39 * fRec4[0])))))) + 4.4701668410053997e-11))) + (fRec5[4] * ((fConst0 * (fConst41 + ((fRec6[0] * (fConst43 + (fConst0 * ((fConst45 * fRec6[0]) + (fConst47 * fRec4[0]))))) + (fRec4[0] * (fConst48 + (fConst49 * fRec4[0])))))) + 1.1175417102513499e-11))) / fTemp0));
-		fRec3[0] = (double(sarrisbluesampclip(double((fConst0 * ((fRec4[0] * (((((fRec5[0] * ((fConst57 + (fConst59 * fRec4[0])) + (fConst0 * (fRec6[0] * ((fConst61 + (fConst63 * fRec4[0])) + (fConst63 * fRec6[0])))))) + (fRec5[1] * ((fConst65 + (fConst11 * (0.0 - (2.1358743428483702e-15 * fRec4[0])))) + (fConst11 * (fRec6[0] * ((fConst67 + (fConst69 * fRec4[0])) + (fConst69 * fRec6[0]))))))) + (fConst0 * (fRec5[2] * (((0.0 - (2.8478324571311799e-14 * fRec4[0])) + 1.12489382056681e-12) + (fRec6[0] * ((fConst70 + (fConst71 * fRec4[0])) + (fConst71 * fRec6[0]))))))) + (fRec5[3] * ((fConst72 + (fConst73 * fRec4[0])) + (fConst11 * (fRec6[0] * ((fConst74 + (fConst75 * fRec4[0])) + (fConst75 * fRec6[0]))))))) + (fRec5[4] * ((fConst76 + (fConst77 * fRec4[0])) + (fConst0 * (fRec6[0] * ((fConst78 + (fConst79 * fRec4[0])) + (fConst79 * fRec6[0])))))))) / fTemp0))))) - (fConst80 * ((((fConst82 * fRec3[1]) + (fConst83 * fRec3[2])) + (fConst84 * fRec3[3])) + (fConst85 * fRec3[4]))));
+		fRec3[0] = ((0.5 * double(sarrisbluesampclip(double((fConst0 * ((fRec4[0] * (((((fRec5[0] * ((fConst57 + (fConst59 * fRec4[0])) + (fConst0 * (fRec6[0] * ((fConst61 + (fConst63 * fRec4[0])) + (fConst63 * fRec6[0])))))) + (fRec5[1] * ((fConst65 + (fConst11 * (0.0 - (2.1358743428483702e-15 * fRec4[0])))) + (fConst11 * (fRec6[0] * ((fConst67 + (fConst69 * fRec4[0])) + (fConst69 * fRec6[0]))))))) + (fConst0 * (fRec5[2] * (((0.0 - (2.8478324571311799e-14 * fRec4[0])) + 1.12489382056681e-12) + (fRec6[0] * ((fConst70 + (fConst71 * fRec4[0])) + (fConst71 * fRec6[0]))))))) + (fRec5[3] * ((fConst72 + (fConst73 * fRec4[0])) + (fConst11 * (fRec6[0] * ((fConst74 + (fConst75 * fRec4[0])) + (fConst75 * fRec6[0]))))))) + (fRec5[4] * ((fConst76 + (fConst77 * fRec4[0])) + (fConst0 * (fRec6[0] * ((fConst78 + (fConst79 * fRec4[0])) + (fConst79 * fRec6[0])))))))) / fTemp0)))))) - (fConst80 * ((((fConst82 * fRec3[1]) + (fConst83 * fRec3[2])) + (fConst84 * fRec3[3])) + (fConst85 * fRec3[4]))));
 		fRec1[0] = ((fConst14 * (fRec2[0] * (((((fConst16 * fRec3[0]) + (fConst87 * fRec3[1])) + (fConst88 * fRec3[2])) + (fConst89 * fRec3[3])) + (fConst90 * fRec3[4])))) - (fConst91 * (((((fConst93 * fRec1[1]) + (fConst95 * fRec1[2])) + (fConst96 * fRec1[3])) + (fConst97 * fRec1[4])) + (fConst98 * fRec1[5]))));
 		fRec0[0] = ((fConst7 * ((((((fConst10 * fRec1[0]) + (fConst100 * fRec1[1])) + (fConst102 * fRec1[2])) + (fConst103 * fRec1[3])) + (fConst104 * fRec1[4])) + (fConst105 * fRec1[5]))) - (fConst2 * ((fConst106 * fRec0[1]) + (fConst107 * fRec0[2]))));
 		output0[i] = FAUSTFLOAT((fConst2 * ((fConst4 * fRec0[2]) + (fConst3 * fRec0[0]))));
@@ -388,4 +388,4 @@ typedef enum
 } PortIndex;
 */
 
-} // end namespace blueamp
+} // end namespace sarrisbluesamp
